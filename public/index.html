@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo list</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="socket.io/socket.io.js"></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="container my-5">
+      <h2>Todo list</h2>
+      <div class="m-todo-list">
+        <ul class="list">
+          <li>
+            <input
+              type="checkbox"
+              name="checkDone"
+              id="checkbox-done-1"
+              class="form-check-input"
+              data-index="0"
+            />
+            <label class="form-check-label" for="checkbox-done-1">
+              {{Todotext}}
+            </label>
+          </li>
+        </ul>
+
+        <div class="row">
+          <div class="col-12 col-sm-6">
+            <input
+              type="text"
+              id="input-text"
+              name="text"
+              class="form-control"
+            />
+          </div>
+          <div class="col-12 col-sm-6">
+            <button class="btn btn-primary btn-add-todo">Add Todo</button>
+            <button class="btn btn-danger btn-clean-todos">
+              Remove completed todos
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
